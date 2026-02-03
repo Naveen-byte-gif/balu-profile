@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://naveentechlabs.netlify.app",
+  siteUrl: "https://agentpbn.netlify.app/",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: "daily",

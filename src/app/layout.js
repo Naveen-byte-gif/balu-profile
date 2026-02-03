@@ -63,13 +63,13 @@ export const metadata = {
     title: "Digital Agent PBN | Perfomance Marketer (Meta ads & Google ads)",
     description:
       "Performance Marketer specializing in Meta Ads, Google Ads, lead generation, and ROI-driven digital growth strategies.",
-    url: "https://naveentechlabs.netlify.app",
+    url: "https://agentpbn.netlify.app/",
     siteName: "Tungana Naveen Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://naveentechlabs.netlify.app/og-image.jpg",
+        url: "https://agentpbn.netlify.app//og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tungana Naveen Developer Portfolio",
@@ -82,11 +82,11 @@ export const metadata = {
     description:
       "Full Stack Developer specializing in Flutter & Next.js. Building elegant, performant, and user-friendly digital experiences.",
     creator: "@tungananaveen",
-    images: ["https://naveentechlabs.netlify.app/og-image.jpg"],
+    images: ["https://agentpbn.netlify.app//og-image.jpg"],
   },
-  metadataBase: new URL("https://naveentechlabs.netlify.app"),
+  metadataBase: new URL("https://agentpbn.netlify.app/"),
   alternates: {
-    canonical: "https://naveentechlabs.netlify.app",
+    canonical: "https://agentpbn.netlify.app/",
   },
   robots: {
     index: true,
@@ -105,14 +105,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG8764LN');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
         {/* ✅ Google Site Verification */}
         <meta
           name="google-site-verification"
-          content="eI8suGCpSqDnH3jXbbRMrjnSHwRmzUi_XH553lbZUJ8"
+          content="M8n5Fw16mgtmPyKmHGhsjvYuGBRi16huHXB3r_V86lI"
         />
 
         {/* ✅ Canonical Link */}
-        <link rel="canonical" href="https://naveentechlabs.netlify.app" />
+        <link rel="canonical" href="https://agentpbn.netlify.app/" />
 
         {/* ✅ Sitemap Reference */}
         <link
@@ -129,7 +141,20 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
 
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KG8764LN"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        {children}
+      </body>
     </html>
   );
 }
